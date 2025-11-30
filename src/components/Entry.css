@@ -55,10 +55,11 @@
 }
 .dev-image{
     background: linear-gradient(#4a90e2, #f1f1f1);
-    border-top-left-radius: 150px;
+    /* border-top-left-radius: 150px;
     border-bottom-left-radius: 150px;
     border-bottom-right-radius: 150px;
-    border-bottom: none;
+    border-bottom: none; */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
     padding: 25px;
     animation-name: devAnimate;
     animation-timing-function: 1;
@@ -66,9 +67,23 @@
     animation-delay: .5s;
     animation-duration: 4s;
     transition: transform 0.9s ease-in-out background-color 0.9s ease-in-out;
+    animation: rotateBlob 8s ease-in-out infinite;
 }
-@keyframes devAnimate {
-   
+@keyframes rotateBlob {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  33% {
+    border-radius: 58% 42% 34% 66% / 63% 55% 45% 37%;
+    box-shadow: 0 0 30px var(--clr-blue);
+  }
+  66% {
+    border-radius: 40% 60% 55% 45% / 50% 32% 68% 50%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 0 20px var(--clr-blue-main);
+  }
 }
 .dev-image img{
     width: 100%;
@@ -272,7 +287,7 @@
     gap: 2px;
 }
 .skills_set img, .learn_img img{
-    width: 90px;
+    width: 70px;
     transition: transform 0.7s ease-in-out background-color 0.7s ease-in-out;
 }
 .skills_set img:hover, .learn_img img:hover{
