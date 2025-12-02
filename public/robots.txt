@@ -5,6 +5,7 @@ User-agent: *
 Allow: /
 Disallow: /node_modules/
 Disallow: /.git/
+Disallow: /.netlify/
 
 # Sitemaps
 Sitemap: https://miracle-portfolio.netlify.app/sitemap.xml
@@ -15,4 +16,12 @@ Crawl-delay: 1
 # User agents that should not crawl
 User-agent: AhrefsBot
 User-agent: SemrushBot
+User-agent: MJ12bot
 Disallow: /
+
+# Allow specific bot categories
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
