@@ -8,6 +8,7 @@ import dev_avatar from "../assets/devImages/dev-avatar.png";
 import dev2 from "../assets/devImages/dev-2.png";
 // import backgroundVideo from "../media/videos/dark-tone.mp4";
 import NavMenu from "./NavMenu";
+import Chatbot from "./Chatbot";
 // Import Dev images
 import react_logo from "../media/tech_stacks/react.png";
 import node_logo from "../media/tech_stacks/node.png";
@@ -16,7 +17,7 @@ import html_logo from "../media/tech_stacks/hmtl.png";
 import css_logo from "../media/tech_stacks/css.png";
 import vsCode from "../media/tech_stacks/vs_code.png";
 import github_logo from "../media/tech_stacks/git-hub.png";
-import vite_logo from "../media/vite.svg"
+import vite_logo from "../media/vite.svg";
 import hand_wave from "../assets/hand-wave.png";
 
 const Entry = () => {
@@ -115,10 +116,15 @@ const Entry = () => {
             style={{
               margin: "50px 0",
             }}>
-            <a href={Resume} download={true} className="" id="cv-download">
+            <a
+              href={Resume}
+              download={true}
+              aria-label="Download my CV"
+              className=""
+              id="cv-download">
               Download Resume
             </a>
-            <a href="" className="let-chat ">
+            <a href="" aria-label="Let's chat" className="let-chat ">
               Let's Connect
             </a>
           </div>
@@ -137,6 +143,7 @@ const Entry = () => {
           <div className="dev-contacts">
             <button>
               <a
+                aria-label="Go to my Github Page"
                 href="https://github.com/MiracleChibuike"
                 target="_blank"
                 rel="noreferrer">
@@ -146,6 +153,7 @@ const Entry = () => {
             <br />
             <button>
               <a
+                aria-label="Go to my LinkedIn Page"
                 href="https://linkedin.com/in/onyia-miracle"
                 target="_blank"
                 rel="noreferrer">
@@ -234,7 +242,10 @@ const Entry = () => {
                 contributing my skills to the right company.
               </p>
               <div>
-                <a href="#contact-me" id="speak-with-me">
+                <a
+                  aria-label="Let's speak"
+                  href="#contact-me"
+                  id="speak-with-me">
                   Speak with Me
                 </a>
               </div>
@@ -393,6 +404,8 @@ const Entry = () => {
             </div>
           </div>
         </div>
+        {/* AI Chatbot */}
+        <Chatbot />
       </div>
     </>
   );

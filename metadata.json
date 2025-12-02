@@ -1,0 +1,277 @@
+{
+  "siteMetadata": {
+    "title": "Onyia Miracle - Front-End Web Developer",
+    "description": "Professional portfolio of Onyia Miracle, a certified front-end web developer specializing in React, JavaScript, and responsive web design. 2+ years of experience with 10+ completed projects.",
+    "url": "https://miracledev.com",
+    "repository": "https://github.com/MiracleChibuike/web-portfolio",
+    "version": "1.0.0",
+    "author": {
+      "name": "Onyia Miracle",
+      "title": "Front-End Web Developer",
+      "email": "contact@miracledev.com",
+      "location": "Owerri, Nigeria",
+      "bio": "I'm a Front-End Web Developer who enjoys turning ideas into clean, responsive, and user-friendly websites. I have experience teaching and coaching 50+ students both in-person and online."
+    }
+  },
+  "social": {
+    "github": {
+      "url": "https://github.com/MiracleChibuike",
+      "username": "MiracleChibuike"
+    },
+    "linkedin": {
+      "url": "https://linkedin.com/in/onyia-miracle",
+      "username": "onyia-miracle"
+    }
+  },
+  "professionalInfo": {
+    "experience": {
+      "yearsOfExperience": 2,
+      "totalClients": 10,
+      "totalProjects": 10,
+      "specialization": "Front-End Web Development"
+    },
+    "education": [
+      {
+        "degree": "Diploma in Software Development",
+        "institution": "Oluaka Institute of Technology",
+        "year": 2023
+      },
+      {
+        "degree": "Certified Web Developer (Internship)",
+        "institution": "Zidio Development",
+        "year": 2024
+      }
+    ],
+    "mentoring": {
+      "totalStudentsCaught": 50,
+      "formats": ["In-person", "Online"]
+    }
+  },
+  "skills": {
+    "technical": {
+      "frontend": [
+        "React JS",
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS3"
+      ],
+      "tools": [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "NPM",
+        "Vite",
+        "Bootstrap"
+      ],
+      "currentlyLearning": [
+        "Node JS",
+        "Figma"
+      ]
+    },
+    "soft": [
+      "Teamwork",
+      "Communication",
+      "Teaching & Mentoring",
+      "Problem Solving",
+      "Creativity"
+    ]
+  },
+  "interests": [
+    "Coding",
+    "Teaching",
+    "Reading",
+    "Open-source Contributions",
+    "Web Development",
+    "Community Building"
+  ],
+  "features": {
+    "portfolio": {
+      "responsive": true,
+      "darkMode": true,
+      "aiChatbot": true,
+      "navigationMenu": true,
+      "resumeDownload": true,
+      "projectShowcase": true
+    }
+  },
+  "technologies": {
+    "frontend": {
+      "framework": "React 19.2.0",
+      "router": "React Router DOM 7.9.3",
+      "dom": "React DOM 19.2.0",
+      "buildTool": "Vite 7.2.2",
+      "bundler": "ESBuild"
+    },
+    "development": {
+      "linter": "ESLint 9.39.1",
+      "linterPlugin": "ESLint React Plugin 7.37.5",
+      "typeChecking": "TypeScript Types"
+    },
+    "deployment": {
+      "hosting": "Vercel",
+      "pages": "GitHub Pages",
+      "buildTool": "Vite Build"
+    }
+  },
+  "sections": {
+    "hero": {
+      "title": "Onyia Miracle.",
+      "subtitle": "Front-End Engineer",
+      "callToAction": [
+        {
+          "text": "Download Resume",
+          "action": "download_resume"
+        },
+        {
+          "text": "Let's Connect",
+          "action": "contact"
+        }
+      ]
+    },
+    "aboutMe": {
+      "title": "Get to Know Me",
+      "subtitle": "Behind the Name",
+      "highlights": [
+        {
+          "label": "Experience",
+          "value": "2+ Years of Industry Experience",
+          "icon": "award"
+        },
+        {
+          "label": "Clients",
+          "value": "10+ Verified Worldwide",
+          "icon": "users"
+        },
+        {
+          "label": "Projects",
+          "value": "10+ Completed",
+          "icon": "book"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills & Expertise",
+      "subtitle": "What I Bring to the Table",
+      "categories": {
+        "technical": "Technical Skills",
+        "soft": "Soft Skills",
+        "learning": "Currently Learning"
+      }
+    },
+    "chatbot": {
+      "enabled": true,
+      "name": "Miracle's AI Assistant",
+      "description": "Interactive AI chatbot to help users learn about the portfolio",
+      "features": [
+        "Answer questions about projects",
+        "Explain technical skills",
+        "Provide experience details",
+        "Discuss services and pricing",
+        "Share contact information",
+        "Detect meaningful vs gibberish input"
+      ]
+    }
+  },
+  "seo": {
+    "keywords": [
+      "front-end developer",
+      "react developer",
+      "web developer",
+      "javascript developer",
+      "portfolio",
+      "freelance developer",
+      "web design",
+      "responsive design",
+      "ui developer",
+      "onyia miracle",
+      "miracle chibuike"
+    ],
+    "ogImage": "/og-image.png",
+    "twitterHandle": "@MiracleDev",
+    "canonical": "https://onyia-miracle.netlify.app/"
+  },
+  "navigation": {
+    "mainNav": [
+      {
+        "label": "Home",
+        "icon": "fa-solid fa-house",
+        "href": "#home"
+      },
+      {
+        "label": "About Me",
+        "icon": "fa-solid fa-user",
+        "href": "#about"
+      },
+      {
+        "label": "Portfolio",
+        "icon": "fa-solid fa-briefcase",
+        "href": "#portfolio"
+      },
+      {
+        "label": "Services",
+        "icon": "fa-solid fa-handshake",
+        "href": "#services"
+      },
+      {
+        "label": "Contact",
+        "icon": "fa-solid fa-address-card",
+        "href": "#contact"
+      }
+    ]
+  },
+  "contactInfo": {
+    "email": "servicesmtechs@gmail.com",
+    "phone": "+234 (9056255572)",
+    "location": "Owerri, Nigeria",
+    "timezone": "WAT (West Africa Time)",
+    "availableForWork": true,
+    "preferredContactMethods": [
+      "LinkedIn",
+      "GitHub",
+      "Email"
+    ]
+  },
+  "services": {
+    "frontEndDevelopment": {
+      "description": "Custom front-end web development using React, JavaScript, CSS, and HTML5",
+      "technologies": [
+        "React JS",
+        "JavaScript",
+        "CSS3",
+        "HTML5",
+        "Bootstrap",
+        "Vite"
+      ]
+    },
+    "responsiveDesign": {
+      "description": "Mobile-first, responsive web design that works on all devices",
+      "features": [
+        "Mobile-friendly layouts",
+        "Cross-browser compatibility",
+        "Performance optimization",
+        "Accessibility compliance"
+      ]
+    },
+    "mentoring": {
+      "description": "Web development coaching and mentoring for aspiring developers",
+      "focus": [
+        "React JS",
+        "JavaScript fundamentals",
+        "CSS & Responsive Design",
+        "Web development best practices"
+      ]
+    }
+  },
+  "projectStats": {
+    "completed": 10,
+    "inProgress": 0,
+    "technologies": [
+      "React JS",
+      "JavaScript",
+      "CSS",
+      "HTML5",
+      "Vite",
+      "Bootstrap"
+    ]
+  }
+}

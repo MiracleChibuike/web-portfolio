@@ -138,7 +138,7 @@
     width: 100%;
 }
 .navMenuContainer{
-    background: #3434ca;
+    background: linear-gradient(#3434ca, #084280);
     padding: 20px 10px;
     border-radius: 140px;
     /* width: max-content; */
