@@ -17,6 +17,7 @@ import css_logo from "../media/tech_stacks/css.png";
 import vsCode from "../media/tech_stacks/vs_code.png";
 import github_logo from "../media/tech_stacks/git-hub.png";
 import vite_logo from "../media/vite.svg"
+import hand_wave from "../assets/hand-wave.png";
 
 const Entry = () => {
   const navigate = useNavigate();
@@ -89,11 +90,14 @@ const Entry = () => {
           {/* <video src={backgroundVideo} autoPlay muted loop playsInline style={{width: "100%"}}>
 
           </video> */}
+          <div className="wave-greet m-2">
+            <img src={hand_wave} className="img_wave" width={"50px"} alt="" />
+          </div>
           <p>
-            <strong>Hello, I'm</strong>
+            <strong>Hello World, I'm</strong>
           </p>
           <h1 className="dev-name">
-            Miracle Chibuike
+            Onyia Miracle
             <span style={{ color: "#4a90e2" }}>.</span>
           </h1>
           <p className="dev-role" style={{ color: "#aaaaaaff" }}>
@@ -175,11 +179,7 @@ const Entry = () => {
           <div className="dev-info">
             <div className="img-dev">
               <div className="img-dev-me">
-                <img
-                  id="img-dev"
-                  src={dev2}
-                  alt="Onyia Miracle Chibuike Avatar"
-                />
+                <img id="img-dev" src={dev2} alt="Onyia Onyia Miracle Avatar" />
               </div>
             </div>
             <div className="dev-bio">
@@ -220,7 +220,7 @@ const Entry = () => {
               </div>
               {/* Dev Into-detials */}
               <p style={{ color: "#aaaaaaff", whiteSpace: "wrap" }} id="int">
-                Hello All! I am Miracle Chibuike, a Certified Front-End Web
+                Hello All! I am Onyia Miracle, a Certified Front-End Web
                 Developer based out of Owerri, Nigeria. I enjoy turning ideas
                 into clean, responsive, and user-friendly websites and
                 applications, blending both logic and creativity in every
@@ -287,51 +287,75 @@ const Entry = () => {
                   }}>
                   Technical Skills
                 </h3>
-                <div className="skills_set mt-5">
+                <div className="skills_set mt-3">
                   <>
-                    <img src={react_logo} alt="" />
+                    <div>
+                      <i className="fa-solid fa-check-circle"></i>
+                      <strong>React JS</strong>
+                    </div>
                   </>
                   <>
-                    <img src={javaScript_Logo} alt="" />
+                    <div>
+                      <i className="fa-solid fa-check-circle"></i>
+                      <strong>JavaScript</strong>
+                    </div>
                   </>
                   <>
                     {" "}
-                    <img src={css_logo} alt="" />
+                    <div>
+                      <i className="fa-solid fa-check-circle"></i>
+                      <strong>CSS</strong>
+                    </div>
                   </>
                   <>
                     {" "}
-                    <img src={html_logo} alt="" />
+                    <div>
+                      <i className="fa-solid fa-check-circle"></i>
+                      <strong>HTML 5</strong>
+                    </div>
                   </>
-                  <img
-                    src="https://git-scm.com/images/logos/downloads/Git-Logo-White.png"
-                    alt=""
-                  />
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i>
+                    <strong>GIT</strong>
+                  </div>
                   {/* Git hub logo */}
-                  <img src={github_logo} alt="" />
-                  <img src={vsCode} alt="" />
-                  <img
-                    src="https://cdn.worldvectorlogo.com/logos/npm-2.svg"
-                    alt=""
-                  />
-                  <img src={vite_logo} alt="" />
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i>
+                    <strong>GitHub</strong>
+                  </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i>
+                    <strong>VS Code</strong>
+                  </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i>
+                    <strong>NPM</strong>
+                  </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i>
+                    <strong>Vite</strong>
+                  </div>
                   {/* Bootstrap logo */}
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg"
-                    alt=""
-                  />
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i>
+                    <strong>Bootstrap</strong>
+                  </div>
                 </div>
                 <div className="learning mt-4">
                   <h3>Currently Learning</h3>
                   <div className="learn_img d-grid mt-4">
                     <>
                       {" "}
-                      <img src={node_logo} alt="" />
+                      <div>
+                        <i className="fa-solid fa-check"></i>
+                        <strong>Node</strong>
+                      </div>
                     </>
-                {/* Figma */}
-                    <img style={{width: "80px"}}
-                      src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
-                      alt=""
-                    />
+                    {/* Figma */}
+                    <div>
+                      <i className="fa-solid fa-check"></i>
+                      <strong>Figma</strong>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -361,6 +385,10 @@ const Entry = () => {
             <div className="soft">
               <div className="soft">
                 <h3>Soft Skils</h3>
+                <div className="soft">
+                  <p>Teamwork</p>
+                  <p>Communication</p>
+                </div>
               </div>
             </div>
           </div>

@@ -16,6 +16,21 @@
     line-height: 1.5;
     /* background: url(../media/videos/dark-tone.mp4); */
 }
+.img_wave{
+    animation: wave 4.5s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: translateY(-15px);}
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
 .dev-name{
     font-size: 3em;
     font-weight: 800;
@@ -271,7 +286,6 @@
 
 /* Experience */
 .experience_cards{
-
     background: var(--clr-dev-cards-exp);
     border-top-right-radius: 120px;
     border-bottom-right-radius: 120px;
@@ -281,21 +295,27 @@
     grid-template-columns: 50% 40%;
     gap: 2em;
 }
+/* .tech_skill{
+    box-shadow: 0 0 10px var(--clr-dark);
+} */
 .skills_set, .learn_img{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
+    gap: 1em;
 }
-.skills_set img, .learn_img img{
-    width: 70px;
+.skills_set i, .learn_img i{
+    font-size: 1.2em;
+    color: var(--clr-blue);
+    padding: 0 5px;
     transition: transform 0.7s ease-in-out background-color 0.7s ease-in-out;
 }
-.skills_set img:hover, .learn_img img:hover{
+.skills_set div:hover, .learn_img div:hover{
     transform: scale(1.1);
     transition: .7s;
-    rotate: 12deg;
+    rotate: 4deg;
     border-radius: 8px;
     filter: brightness(90%);
+    cursor: pointer;
 }
 @media screen and (min-width: 0) and (max-width: 750px) {
   #parent{
