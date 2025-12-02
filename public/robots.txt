@@ -8,7 +8,7 @@ Disallow: /.git/
 Disallow: /.netlify/
 
 # Sitemaps
-Sitemap: https://miracle-portfolio.netlify.app/sitemap.xml
+Sitemap: https://onyia-miracle.netlify.app/sitemap.xml
 
 # Crawl-delay to prevent server overload (in seconds)
 Crawl-delay: 1
