@@ -1,9 +1,15 @@
 # Netlify configuration for SEO and performance optimization
 
 [build]
-  command = "npm run build"
+  # Ensure devDependencies (like vite) are installed during Netlify builds
+  # so the vite binary is available during the build step.
+  command = "npm ci --include=dev && npm run build"
   publish = "dist"
   functions = "functions"
+
+[build.environment]
+  # Instruct npm to install devDependencies in Netlify environment
+  NPM_CONFIG_PRODUCTION = "false"
 
 # Redirect rules for SPA (Single Page Application)
 # But exclude specific files that should not be redirected
