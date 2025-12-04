@@ -155,15 +155,12 @@
   left: 10px;
 }
 
-
-
-
 .navMenuContainer {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  
+
   background: linear-gradient(#3434ca, #084280);
   padding: 20px 30px;
   border-radius: 140px;
@@ -176,12 +173,11 @@
   z-index: 9999;
 }
 
-
 .navMenuContainer button {
   background: transparent;
   border: none;
   outline: none;
-  padding: 8px 10px;
+  /* padding: 8px 10px; */
   margin: 0 8px;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   border-radius: 50%;
@@ -215,6 +211,7 @@
 .img-dev {
   background: linear-gradient(#084280, #4a90e2);
   width: 100%;
+  height: 50%;
   aspect-ratio: 1 / 1;
   border-radius: 2rem;
   display: grid;
@@ -231,6 +228,7 @@
   place-items: center;
   backdrop-filter: blur(20px);
   width: 100%;
+  /* height: 100%; */
   transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
 }
@@ -308,29 +306,110 @@
 
 /* Experience */
 .experience_cards {
-    background: var(--clr-dev-cards-exp);
+  background: var(--clr-dev-cards-exp);
   border-top-right-radius: 120px;
-  border-bottom-right-radius: 120px; 
-   /* box-shadow: 0 0 5px var(--clr-blue);  */
+  border-bottom-right-radius: 120px;
+  /* box-shadow: 0 0 5px var(--clr-blue);  */
   padding: 25px;
   display: grid;
   grid-template-columns: 50% 40%;
   gap: 2em;
-   transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.experience_cards:hover{
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    background: transparent;
-    outline: 2px solid #05101c;
-    box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
+.experience_cards:hover {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background: transparent;
+  outline: 2px solid #05101c;
+  box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
 }
+.skills_combine,
+.ed {
+  display: grid;
+  grid-template-columns: 49% 48%;
+  gap: 2em;
+}
+.skills_combine i {
+  font-size: 24px;
+  color: rgba(74, 144, 226, 0.3);
+}
+.tools,
+.FE,
+.stylings,
+.api_srtc {
+  background: #05101c;
+  border-radius: 14px;
+  border: 2px solid var(--clr-dark);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.tools:hover,
+.FE:hover,
+.stylings:hover,
+.api_srtc:hover,
+.ed:hover {
+  box-shadow: 0 4px 25px rgba(74, 144, 226, 0.3);
+  transition: 0.7s ease;
+  transform: translateY(-10px);
+}
+.tools h3,
+.FE h3,
+.stylings h3,
+.api_srtc h3 {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.fe_skills_set,
+.tools_skills,
+.css_scrsc,
+.api_tst {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+}
+.fe_skills_set > div,
+.tools_skills > div,
+.css_scrsc > div,
+.api_tst > div {
+  background: #0f2236;
+  border-radius: 12px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Education */
+/* .education_certs{
+  background: #05101c;
+} */
+.ed {
+  background: #05101c;
+  border: 2px solid var(--clr-dark);
+  padding: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 14px;
+}
+.ed_upper,
+.ed_e2,
+.ed_e3 {
+  background: #0f2236;
+  border-radius: 12px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+.check_ed {
+  margin-right: 25px;
+}
+.check_ed i {
+  font-size: 25px;
+  color: rgba(74, 144, 226, 0.3);
+}
+
 /* .tech_skill, .soft_skills{
     border-radius: 25px;
     background: var(--clr-dev-cards-exp);
     padding: 15px;
     box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
 } */
-.skills_set,
+/* .skills_set,
 .learn_img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -352,11 +431,11 @@
   filter: brightness(90%);
   cursor: pointer;
 }
-.soft{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
+.soft {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+} */
 @media screen and (min-width: 0) and (max-width: 750px) {
   #parent {
     padding-left: 10px;
@@ -402,6 +481,14 @@
   }
   .skills_set {
     grid-template-columns: 1fr 1fr;
+  }
+  .skills_combine,
+  .fe_skills_set,
+  .tools_skills,
+  .css_scrsc,
+  .api_tst,
+  .ed {
+    grid-template-columns: 1fr;
   }
   /* #cv-download, .let-chat{
     padding: 10px;

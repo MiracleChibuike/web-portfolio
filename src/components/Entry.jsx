@@ -19,6 +19,7 @@ import vsCode from "../media/tech_stacks/vs_code.png";
 import github_logo from "../media/tech_stacks/git-hub.png";
 import vite_logo from "../media/vite.svg";
 import hand_wave from "../assets/hand-wave.png";
+import mainDev from "../assets/dev/Onyia_miracle_dev.webp";
 
 const Entry = () => {
   const [chatbotOpen, setChatbotOpen] = useState(false);
@@ -52,6 +53,39 @@ const Entry = () => {
       });
     }
   });
+
+  // Apply data-aos attributes and observe parent children for scroll animations
+  useEffect(() => {
+    const parent = document.getElementById("parent");
+    if (!parent) return;
+
+    // Choose which direct children to animate (skip nav menu)
+    const children = Array.from(parent.children).filter(
+      (el) => !el.classList.contains("nav-menu")
+    );
+
+    children.forEach((el) => {
+      if (!el.hasAttribute("data-aos"))
+        el.setAttribute("data-aos", "zoom-in-up");
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("aos-animate");
+          } else {
+            entry.target.classList.remove("aos-animate");
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    children.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -183,7 +217,11 @@ const Entry = () => {
           <div className="dev-info">
             <div className="img-dev">
               <div className="img-dev-me">
-                <img id="img-dev" src={dev2} alt="Onyia Onyia Miracle Avatar" />
+                <img
+                  id="img-dev"
+                  src={mainDev}
+                  alt="Onyia Onyia Miracle Avatar"
+                />
               </div>
             </div>
             <div className="dev-bio">
@@ -269,153 +307,131 @@ const Entry = () => {
               Skills & Expertise
             </h3>
           </div>
-          <div className="experience_cards mt-lg-5">
-            <div className="tech_skill">
-              <div className="education">
-                <h3
-                  style={{
-                    fontWeight: "800",
-                  }}>
-                  Education
-                </h3>
-                <div className="school">
-                  <h5>Diploma in Software Development</h5>
-                  <p>Oluaka Institute of Technology - 2023</p>
-                  <br />
-                  <h5>Certified Web Developer (Internship)</h5>
-                  <p>Zidio Development - 2024</p>
-                </div>
-              </div>
-              <br />
-              <div className="tech">
-                <h3
-                  style={{
-                    fontWeight: "800",
-                  }}>
-                  Technical Skills
-                </h3>
-                <div className="skills_set mt-3">
-                  <>
-                    <div>
-                      <i className="fa-solid fa-check-circle"></i>
-                      <strong>React JS</strong>
-                    </div>
-                  </>
-                  <>
-                    <div>
-                      <i className="fa-solid fa-check-circle"></i>
-                      <strong>JavaScript</strong>
-                    </div>
-                  </>
-                  <>
-                    {" "}
-                    <div>
-                      <i className="fa-solid fa-check-circle"></i>
-                      <strong>CSS</strong>
-                    </div>
-                  </>
-                  <>
-                    {" "}
-                    <div>
-                      <i className="fa-solid fa-check-circle"></i>
-                      <strong>HTML 5</strong>
-                    </div>
-                  </>
+          <div className="skills mt-5">
+            <div className="skills_combine">
+              <div className="FE">
+                <h3 style={{ fontWeight: "bold" }}>Front-End Development</h3>
+                <div className="fe_skills_set">
                   <div>
-                    <i className="fa-solid fa-check-circle"></i>
-                    <strong>GIT</strong>
-                  </div>
-                  {/* Git hub logo */}
-                  <div>
-                    <i className="fa-solid fa-check-circle"></i>
-                    <strong>GitHub</strong>
+                    <i className="fa-solid fa-check-circle"></i> React.JS
                   </div>
                   <div>
-                    <i className="fa-solid fa-check-circle"></i>
-                    <strong>VS Code</strong>
+                    <i className="fa-solid fa-check-circle"></i> HTML5/CSS3
                   </div>
                   <div>
-                    <i className="fa-solid fa-check-circle"></i>
-                    <strong>NPM</strong>
+                    <i className="fa-solid fa-check-circle"></i> JavaScript
+                    (ES6+)
                   </div>
                   <div>
-                    <i className="fa-solid fa-check-circle"></i>
-                    <strong>Vite</strong>
+                    <i className="fa-solid fa-check-circle"></i> Performance
+                    Optimization
                   </div>
-                  {/* Bootstrap logo */}
                   <div>
-                    <i className="fa-solid fa-check-circle"></i>
-                    <strong>Bootstrap</strong>
+                    <i className="fa-solid fa-check-circle"></i> Responsive
+                    Design
                   </div>
-                </div>
-                <div className="learning mt-4">
-                  <h3>Currently Learning</h3>
-                  <div className="learn_img d-grid mt-4">
-                    <>
-                      {" "}
-                      <div>
-                        <i className="fa-solid fa-check"></i>
-                        <strong>Node</strong>
-                      </div>
-                    </>
-                    {/* Figma */}
-                    <div>
-                      <i className="fa-solid fa-check"></i>
-                      <strong>Figma</strong>
-                    </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> SEO Best
+                    Practices
                   </div>
                 </div>
               </div>
-              <div className="interest m-3">
-                <h3
-                  style={{
-                    fontWeight: "800",
-                  }}>
-                  Interest
-                </h3>
-                <div className="d-flex gap-4">
-                  <p>
-                    {" "}
-                    <i className="fa-solid fa-circle-check"></i> Coding
-                  </p>
-                  <p>
-                    {" "}
-                    <i className="fa-solid fa-circle-check"></i> Teaching
-                  </p>
-                  <p>
-                    {" "}
-                    <i className="fa-solid fa-circle-check"></i> Reading
-                  </p>
+              <div className="tools">
+                <h3 style={{ fontWeight: "bold" }}>Tools & Technologies</h3>
+                <div className="tools_skills">
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> Git/GitHub
+                  </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> NPM
+                  </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> VS Code
+                  </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> Vite
+                  </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> Figma
+                  </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> ESLint &
+                    Pretier
+                  </div>
+                </div>
+              </div>
+              <div className="stylings">
+                <h3 style={{ fontWeight: "bold" }}>Styling Frameworks</h3>
+                <div className="css_scrsc">
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> Bootstrap
+                  </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> CSS Modules
+                  </div>
+                </div>
+              </div>
+              <div className="api_srtc">
+                <h3 style={{ fontWeight: "bold" }}>APIs & State Management</h3>
+                <div className="api_tst">
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> REST/Restful
+                    API's
+                  </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> Axios/Fetch
+                  </div>
+                  <div>
+                    <i className="fa-solid fa-check-circle"></i> React Hooks
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="soft_skills">
-              <div className="soft_sk">
-                <h3>Soft Skils</h3>
-                <div className="soft">
-                  <p>Teamwork</p>
-                  <p>Communication</p>
-                  <p>Teaching & Mentoring</p>
-                  <p>Time Management</p>
-                </div>
-              </div>
-              <div className="skill_set mt-4">
-                <h3>Skill Set</h3>
-                <article className="soft">
-                  <p>Web Development</p>
-                  <p>Web App Development</p>
-                  <p>Web Performance & Optimization</p>
-                  <p>UX/UI Engineering</p>
-                </article>
-              </div>
-              <div className="lang mt-4">
-                <h3>Language</h3>
-                <article className="soft">
-                  <p>English</p>
-                  <p>Pidgin</p>
-                  <p>Igbo</p>
-                </article>
-              </div>
+          </div>
+        </div>
+        {/* Education and Certifications */}
+        <div className="education_certs">
+          <div className="text-center mt-lg-3">
+            <p>
+              <strong style={{ color: "#aaaaaaff" }}>
+                Academic Background
+              </strong>
+            </p>
+            <h3
+              className="dev-about-header"
+              style={{
+                fontWeight: "700",
+              }}>
+              Education & Professional Certifications
+            </h3>
+          </div>
+        </div>
+        <div className="ed mt-4">
+          <div className="ed_upper d-flex">
+            <div className="check_ed">
+              <i className="fa-solid fa-circle-check"></i>
+            </div>
+            <div>
+              <h5>Diploma in Software Development</h5>
+              <p>Oluaka Institute of Technology - 2023</p>
+            </div>
+          </div>
+          <div className="ed_e2 d-flex">
+            <div className="check_ed">
+              <i className="fa-solid fa-circle-check"></i>
+            </div>
+            <div>
+              <h5>Certified Web Developer (Internship)</h5>
+              <p>Zidio Development - 2024</p>
+            </div>
+          </div>
+          <div className="ed_e3 d-flex">
+            <div className="check_ed">
+              <i className="fa-solid fa-circle-check"></i>
+            </div>
+            <div>
+              <h5>Best Student Award </h5>
+              <p>Noble Computer Institute - 2021</p>
             </div>
           </div>
         </div>
