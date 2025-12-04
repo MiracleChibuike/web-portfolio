@@ -66,20 +66,6 @@ const Entry = () => {
       easing: "ease-in-out",
     });
 
-    // Set data-aos on parent children (skip nav menu)
-    const parent = document.getElementById("parent");
-    if (parent) {
-      const children = Array.from(parent.children).filter(
-        (el) => !el.classList.contains("nav-menu")
-      );
-      children.forEach((el) => {
-        if (!el.hasAttribute("data-aos")) {
-          el.setAttribute("data-aos", "zoom-in-up");
-        }
-      });
-      AOS.refresh(); // Refresh to detect newly added data-aos attributes
-    }
-  }, []);
 
   return (
     <>
