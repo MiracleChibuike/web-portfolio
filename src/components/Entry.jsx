@@ -389,13 +389,32 @@ const Entry = () => {
                 </div>
               </div>
             </div>
-            <div className="soft">
-              <div className="soft">
+            <div className="soft_skills">
+              <div className="soft_sk">
                 <h3>Soft Skils</h3>
                 <div className="soft">
                   <p>Teamwork</p>
                   <p>Communication</p>
+                  <p>Teaching & Mentoring</p>
+                  <p>Time Management</p>
                 </div>
+              </div>
+              <div className="skill_set mt-4">
+                <h3>Skill Set</h3>
+                <article className="soft">
+                  <p>Web Development</p>
+                  <p>Web App Development</p>
+                  <p>Web Performance & Optimization</p>
+                  <p>UX/UI Engineering</p>
+                </article>
+              </div>
+              <div className="lang mt-4">
+                <h3>Language</h3>
+                <article className="soft">
+                  <p>English</p>
+                  <p>Pidgin</p>
+                  <p>Igbo</p>
+                </article>
               </div>
             </div>
           </div>

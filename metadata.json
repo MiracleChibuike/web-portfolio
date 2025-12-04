@@ -53,7 +53,9 @@
         "React JS",
         "JavaScript (ES6+)",
         "HTML5",
-        "CSS3"
+        "CSS3",
+        "TypeScript (basics)",
+        "React Hooks & State Management"
       ],
       "tools": [
         "Git",
@@ -61,19 +63,81 @@
         "VS Code",
         "NPM",
         "Vite",
-        "Bootstrap"
+        "Bootstrap",
+        "ESLint",
+        "Figma (design collaboration)"
       ],
       "currentlyLearning": [
         "Node JS",
-        "Figma"
+        "Express.js",
+        "MongoDB"
       ]
     },
+    "proficiencies": [
+      {
+        "name": "Full-Stack JavaScript Development",
+        "icon": "code",
+        "description": "Building complete applications with React on the frontend, Node.js/Express on the backend, and database integration for seamless user experiences.",
+        "skills": [
+          "React.js (component architecture, hooks, routing)",
+          "JavaScript ES6+ (async/await, destructuring, closures)",
+          "REST APIs & HTTP protocols",
+          "JSON & data management",
+          "Node.js & Express.js (currently learning)",
+          "Database fundamentals (MongoDB, relational)"
+        ]
+      },
+      {
+        "name": "UI/UX Engineering & Component Design",
+        "icon": "palette",
+        "description": "Creating intuitive, accessible, and beautiful user interfaces with a focus on responsive design, modern CSS techniques, and design system principles.",
+        "skills": [
+          "Responsive design (mobile-first approach)",
+          "CSS Grid, Flexbox, and modern layout techniques",
+          "Web accessibility (WCAG, semantic HTML)",
+          "Component-based architecture",
+          "Design system principles",
+          "Cross-browser compatibility testing",
+          "Figma collaboration with designers"
+        ]
+      },
+      {
+        "name": "Web Performance & Optimization",
+        "icon": "zap",
+        "description": "Optimizing web applications for speed, scalability, and efficiency. Implementing best practices for bundle size reduction, lazy loading, and core web vitals.",
+        "skills": [
+          "Code splitting & dynamic imports",
+          "Lazy loading images and components",
+          "Bundle analysis & optimization",
+          "Caching strategies",
+          "Performance monitoring (Lighthouse, Web Vitals)",
+          "Asset optimization (compression, minification)",
+          "SEO best practices & meta tags"
+        ]
+      },
+      {
+        "name": "Cloud Deployment & DevOps Fundamentals",
+        "icon": "cloud",
+        "description": "Managing application lifecycle from development to production. Expertise in CI/CD pipelines, automated testing, and modern hosting platforms.",
+        "skills": [
+          "Git version control & GitHub workflows",
+          "Netlify & Vercel deployment",
+          "CI/CD concepts & GitHub Actions",
+          "Environment variables & secrets management",
+          "Build optimization (Vite, bundling)",
+          "Monitoring & debugging in production",
+          "Docker fundamentals (basics)"
+        ]
+      }
+    ],
     "soft": [
       "Teamwork",
       "Communication",
       "Teaching & Mentoring",
       "Problem Solving",
-      "Creativity"
+      "Creativity",
+      "Attention to Detail",
+      "Adaptability & Continuous Learning"
     ]
   },
   "interests": [

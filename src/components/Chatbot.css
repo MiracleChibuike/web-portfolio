@@ -1,7 +1,7 @@
 /* Chatbot Widget Button */
 .chatbot-widget-btn {
   position: fixed;
-  bottom: 70px;
+  bottom: 30px;
   right: 30px;
   width: 60px;
   height: 60px;
@@ -264,12 +264,13 @@
 }
 
 /* Responsive Design */
-@media (max-width: 750px) {
+@media screen and (min-width: 0) and (max-width: 750px) {
   .chatbot-container {
-    width: calc(100vw - 60px);
-    height: 500px;
-    bottom: 80px;
-    right: 15px;
+     width: calc(100vw - 70px);
+    height: 450px;
+    bottom: 170px;
+    right: 10px;
+    border-radius: 8px;
   }
 
   .chatbot-widget-btn {
@@ -293,11 +294,11 @@
   }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .chatbot-container {
     width: calc(100vw - 70px);
     height: 450px;
-    bottom: 70px;
+    bottom: 170px;
     right: 10px;
     border-radius: 8px;
   }
@@ -306,4 +307,4 @@
     font-size: 13px;
     padding: 10px 12px;
   }
-}
+} */

@@ -182,6 +182,7 @@
   border: none;
   outline: none;
   padding: 8px 10px;
+  margin: 0 8px;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   border-radius: 50%;
   width: 40px;
@@ -307,17 +308,27 @@
 
 /* Experience */
 .experience_cards {
-  background: var(--clr-dev-cards-exp);
+    background: var(--clr-dev-cards-exp);
   border-top-right-radius: 120px;
-  border-bottom-right-radius: 120px;
-  box-shadow: 0 0 5px var(--clr-blue);
+  border-bottom-right-radius: 120px; 
+   /* box-shadow: 0 0 5px var(--clr-blue);  */
   padding: 25px;
   display: grid;
   grid-template-columns: 50% 40%;
   gap: 2em;
+   transition: all 0.3s ease;
 }
-/* .tech_skill{
-    box-shadow: 0 0 10px var(--clr-dark);
+.experience_cards:hover{
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background: transparent;
+    outline: 2px solid #05101c;
+    box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
+}
+/* .tech_skill, .soft_skills{
+    border-radius: 25px;
+    background: var(--clr-dev-cards-exp);
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
 } */
 .skills_set,
 .learn_img {
@@ -340,6 +351,11 @@
   border-radius: 8px;
   filter: brightness(90%);
   cursor: pointer;
+}
+.soft{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 @media screen and (min-width: 0) and (max-width: 750px) {
   #parent {
