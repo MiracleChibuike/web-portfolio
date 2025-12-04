@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Entry.css";
 import Resume from "../media/files/Miracle.pdf";
 import dev_avatar from "../assets/devImages/dev-avatar.png";
@@ -56,35 +58,27 @@ const Entry = () => {
 
   // Apply data-aos attributes and observe parent children for scroll animations
   useEffect(() => {
-    const parent = document.getElementById("parent");
-    if (!parent) return;
-
-    // Choose which direct children to animate (skip nav menu)
-    const children = Array.from(parent.children).filter(
-      (el) => !el.classList.contains("nav-menu")
-    );
-
-    children.forEach((el) => {
-      if (!el.hasAttribute("data-aos"))
-        el.setAttribute("data-aos", "zoom-in-up");
+    AOS.init({
+      duration: 800,
+      delay: 0,
+      once: false,
+      offset: 120,
+      easing: "ease-in-out",
     });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("aos-animate");
-          } else {
-            entry.target.classList.remove("aos-animate");
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-
-    children.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
+    // Set data-aos on parent children (skip nav menu)
+    const parent = document.getElementById("parent");
+    if (parent) {
+      const children = Array.from(parent.children).filter(
+        (el) => !el.classList.contains("nav-menu")
+      );
+      children.forEach((el) => {
+        if (!el.hasAttribute("data-aos")) {
+          el.setAttribute("data-aos", "zoom-in-up");
+        }
+      });
+      AOS.refresh(); // Refresh to detect newly added data-aos attributes
+    }
   }, []);
 
   return (
