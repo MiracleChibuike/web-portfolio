@@ -401,5 +401,6 @@
   .navMenuContainer {
     left: 10%;
     right: 10%;
+    transform: none;
   }
 }
