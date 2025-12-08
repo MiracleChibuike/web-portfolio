@@ -520,15 +520,15 @@
   .scroll {
     display: none;
   }
-  
+
   /* .navMenuContainer {
     left: 10%;
     right: 10%;
     transform: none;
   } */
    .navMenuContainer button{
-      margin: 0 5px;
-      padding: 8px;
+      margin: 0 4px;
+      padding: 5px 8px;
    }
   /* About Me */
   .dev-info {
