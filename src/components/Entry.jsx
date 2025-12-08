@@ -24,6 +24,12 @@ import hand_wave from "../assets/hand-wave.png";
 import mainDev from "../assets/dev/Onyia_miracle_dev.webp";
 
 const Entry = () => {
+
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+
+  })
   const [chatbotOpen, setChatbotOpen] = useState(false);
   const navigate = useNavigate();
   const btnRef = useRef(null);
@@ -95,13 +101,13 @@ const Entry = () => {
           {/* <video src={backgroundVideo} autoPlay muted loop playsInline style={{width: "100%"}}>
 
           </video> */}
-          <div className="wave-greet m-2">
+          <div className="wave-greet m-2" data-aos="zoom-in-up">
             <img src={hand_wave} className="img_wave" width={"50px"} alt="" />
           </div>
           <p>
             <strong>Hello World, I'm</strong>
           </p>
-          <h1 className="dev-name">
+          <h1 className="dev-name" data-aos="zoom-in-up">
             Onyia Miracle
             <span style={{ color: "#4a90e2" }}>.</span>
           </h1>
@@ -175,7 +181,11 @@ const Entry = () => {
           </div>
         </div>
         {/* About Me */}
-        <div className="about-me" id="about" ref={aboutMe}>
+        <div
+          className="about-me"
+          id="about"
+          data-aos="zoom-in-up"
+          ref={aboutMe}>
           <div className="text-center">
             <p>
               <strong style={{ color: "#aaaaaaff" }}>Behind the Name</strong>
@@ -199,7 +209,7 @@ const Entry = () => {
               </div>
             </div>
             <div className="dev-bio">
-              <div className="dev-cards">
+              <div className="dev-cards" data-aos="fade-right">
                 <div className="experience-card">
                   <button style={{ background: "transparent", border: "none" }}>
                     <i className="fa-solid fa-award"></i>
@@ -235,7 +245,10 @@ const Entry = () => {
                 </div>
               </div>
               {/* Dev Into-detials */}
-              <p style={{ color: "#aaaaaaff", whiteSpace: "wrap" }} id="int">
+              <p
+                style={{ color: "#aaaaaaff", whiteSpace: "wrap" }}
+                data-aos="fade-right"
+                id="int">
                 Hello All! I am Onyia Miracle, a Certified Front-End Web
                 Developer based out of Owerri, Nigeria. I enjoy turning ideas
                 into clean, responsive, and user-friendly websites and
@@ -262,6 +275,7 @@ const Entry = () => {
         </div>
         {/* Working Experience */}
         <div
+          data-aos="zoom-in-up"
           className="work_Exp"
           style={{
             margin: "90px 0",
@@ -282,7 +296,7 @@ const Entry = () => {
           </div>
           {/* Working Experience cards */}
           <div className="work_exp">
-            <div className="work_exp_auto m-2">
+            <div className="work_exp_auto m-2" data-aos="fade-up-right">
               <div
                 className="roles_info"
                 role="button"
@@ -344,11 +358,13 @@ const Entry = () => {
                   <span>Fetch/Axious</span>
                   <span>HTML5/CSS3</span>
                   <span>Bootstrap</span>
+                  <span>Responsive Design Practices</span>
+                  <span>Git/Github</span>
                 </div>
               </div>
             </div>
             {/* auto 2 */}
-            <div className="work_exp_auto2 m-2">
+            <div className="work_exp_auto2 m-2" data-aos="fade-up-right">
               <div
                 className="roles_info"
                 role="button"
@@ -402,18 +418,20 @@ const Entry = () => {
                   <span>Express.js</span>
                   <span>React</span>
                   <span>Node.js</span>
+                  <span>Responsive Design Practices</span>
+                  <span>Git/Github</span>
                 </div>
               </div>
             </div>
             {/* auto 3 */}
-            <div className="work_exp_auto2 m-2">
+            <div className="work_exp_auto2 m-2" data-aos="fade-up-right">
               <div
                 className="roles_info"
                 role="button"
                 onClick={() => setOpenJob(openJob === 2 ? null : 2)}
                 aria-expanded={openJob === 2}>
                 <div className="role d-flex justify-content-between">
-                  <h5>Front-End Developer & Instructor </h5>
+                  <h5>Front-End Engineer & Instructor </h5>
                   <p>
                     <i className="fa-solid fa-caret-down"></i>
                   </p>
@@ -480,9 +498,80 @@ const Entry = () => {
                   <p className="mt-3">
                     <strong>Technologies Used:</strong>{" "}
                   </p>
-                  <span>Express.js</span>
-                  <span>React</span>
                   <span>Node.js</span>
+                  <span>React.js</span>
+                  <span>JavaScript</span>
+                  <span>HTML/CSS</span>
+                  <span>Responsive Design Practices</span>
+                  <span>Git/GitHub</span>
+                  <span>React Deployment Best Practices</span>
+                </div>
+              </div>
+            </div>
+            {/* auto 4 */}
+            <div className="work_exp_auto2 m-2" data-aos="fade-up-right">
+              <div
+                className="roles_info"
+                role="button"
+                onClick={() => setOpenJob(openJob === 3 ? null : 3)}
+                aria-expanded={openJob === 2}>
+                <div className="role d-flex justify-content-between">
+                  <h5>Front-End Instructor </h5>
+                  <p>
+                    <i className="fa-solid fa-caret-down"></i>
+                  </p>
+                </div>
+                <div className="role_details">
+                  <span>Oluaka Institute of Technology</span>
+                  <span>
+                    {" "}
+                    <i className="fa-solid fa-location-dot text-secondary"></i>{" "}
+                    Obinze, Imo State Nigeria
+                  </span>
+                  <span>
+                    {" "}
+                    <i className="fa-solid fa-calendar text-secondary"></i>{" "}
+                    November 2023 - February 2024{" "}
+                  </span>
+                  <div className="job_type mt-3">
+                    <span className="shadow-lg">Part-Time (Contract)</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div className={`jD mt-2 ${openJob === 3 ? "retrieve" : ""}`}>
+                <ul>
+                  <li>
+                    Instructed a cohort of 25 students in the fundamentals and
+                    advanced techniques of front-end web development - ensuring
+                    their successful graduation with strong technical skills.
+                  </li>
+                  <li>
+                    Provided personalized guidance and support to 25 students
+                    through-out their front-web development projects - fostering
+                    their problem-solving skills and facilitating projects
+                    completion.
+                  </li>
+                  <li>
+                    Designed and facilitated interactive lessons, practical
+                    coding sessions, and real-time debugging — significantly
+                    strengthening student's problem-solving abilities and
+                    accelerating their understanding of core development
+                    concepts.
+                  </li>
+                  Delivered a modern, industry-aligned web development
+                  curriculum — resulting in improved student competence,
+                  stronger project outcomes, and higher course completion rates.
+                </ul>
+                <div className="tech_used">
+                  <p className="mt-3">
+                    <strong>Technologies Used:</strong>{" "}
+                  </p>
+                  <span>React.js</span>
+                  <span>JavaScript</span>
+                  <span>HTML/CSS</span>
+                  <span>Responsive Design Practices</span>
+                  <span>Git/GitHub</span>
                 </div>
               </div>
             </div>
@@ -490,6 +579,7 @@ const Entry = () => {
         </div>
         {/* Experience */}
         <div
+          data-aos="fade-down"
           id="experience-me"
           className=""
           style={{
@@ -514,25 +604,25 @@ const Entry = () => {
               <div className="FE">
                 <h3 style={{ fontWeight: "bold" }}>Front-End Development</h3>
                 <div className="fe_skills_set">
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> React.JS
                   </div>
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> HTML5/CSS3
                   </div>
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> JavaScript
                     (ES6+)
                   </div>
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> Performance
                     Optimization
                   </div>
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> Responsive
                     Design
                   </div>
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> SEO Best
                     Practices
                   </div>
@@ -541,22 +631,22 @@ const Entry = () => {
               <div className="tools">
                 <h3 style={{ fontWeight: "bold" }}>Tools & Technologies</h3>
                 <div className="tools_skills">
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> Git/GitHub
                   </div>
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> NPM
                   </div>
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> VS Code
                   </div>
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> Vite
                   </div>
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> Figma
                   </div>
-                  <div>
+                  <div data-aos="fade-up-left">
                     <i className="fa-solid fa-check-circle"></i> ESLint &
                     Pretier
                   </div>
