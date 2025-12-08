@@ -27,7 +27,7 @@ const Entry = () => {
 
   // Initialize AOS
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 1000, once: false });
 
   })
   const [chatbotOpen, setChatbotOpen] = useState(false);
@@ -354,12 +354,14 @@ const Entry = () => {
                   <p className="mt-3">
                     <strong>Technologies Used:</strong>{" "}
                   </p>
-                  <span>JavaScript(ES6) </span>
-                  <span>Fetch/Axious</span>
-                  <span>HTML5/CSS3</span>
-                  <span>Bootstrap</span>
-                  <span>Responsive Design Practices</span>
-                  <span>Git/Github</span>
+                  <div className="tech_used_illustrate">
+                    <span>JavaScript(ES6) </span>
+                    <span>Fetch/Axious</span>
+                    <span>HTML5/CSS3</span>
+                    <span>Bootstrap</span>
+                    <span>Responsive Design Practices</span>
+                    <span>Git/Github</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -415,11 +417,13 @@ const Entry = () => {
                   <p className="mt-3">
                     <strong>Technologies Used:</strong>{" "}
                   </p>
-                  <span>Express.js</span>
-                  <span>React</span>
-                  <span>Node.js</span>
-                  <span>Responsive Design Practices</span>
-                  <span>Git/Github</span>
+                  <div className="tech_used_illustrate">
+                    <span>Express.js</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Responsive Design Practices</span>
+                    <span>Git/Github</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -498,13 +502,15 @@ const Entry = () => {
                   <p className="mt-3">
                     <strong>Technologies Used:</strong>{" "}
                   </p>
-                  <span>Node.js</span>
-                  <span>React.js</span>
-                  <span>JavaScript</span>
-                  <span>HTML/CSS</span>
-                  <span>Responsive Design Practices</span>
-                  <span>Git/GitHub</span>
-                  <span>React Deployment Best Practices</span>
+                  <div className="tech_used_illustrate">
+                    <span>Node.js</span>
+                    <span>React.js</span>
+                    <span>JavaScript</span>
+                    <span>HTML/CSS</span>
+                    <span>Responsive Design Practices</span>
+                    <span>Git/GitHub</span>
+                    <span>React Deployment Best Practices</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -567,11 +573,13 @@ const Entry = () => {
                   <p className="mt-3">
                     <strong>Technologies Used:</strong>{" "}
                   </p>
-                  <span>React.js</span>
-                  <span>JavaScript</span>
-                  <span>HTML/CSS</span>
-                  <span>Responsive Design Practices</span>
-                  <span>Git/GitHub</span>
+                  <div className="tech_used_illustrate">
+                    <span>React.js</span>
+                    <span>JavaScript</span>
+                    <span>HTML/CSS</span>
+                    <span>Responsive Design Practices</span>
+                    <span>Git/GitHub</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -599,30 +607,30 @@ const Entry = () => {
               Skills & Expertise
             </h3>
           </div>
-          <div className="skills mt-5">
+          <div className="skills mt-5" data-aos="zoom-in-out">
             <div className="skills_combine">
               <div className="FE">
                 <h3 style={{ fontWeight: "bold" }}>Front-End Development</h3>
                 <div className="fe_skills_set">
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> React.JS
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> HTML5/CSS3
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> JavaScript
                     (ES6+)
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> Performance
                     Optimization
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> Responsive
                     Design
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> SEO Best
                     Practices
                   </div>
@@ -631,22 +639,22 @@ const Entry = () => {
               <div className="tools">
                 <h3 style={{ fontWeight: "bold" }}>Tools & Technologies</h3>
                 <div className="tools_skills">
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> Git/GitHub
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> NPM
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> VS Code
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> Vite
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> Figma
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> ESLint &
                     Pretier
                   </div>
@@ -655,10 +663,10 @@ const Entry = () => {
               <div className="stylings">
                 <h3 style={{ fontWeight: "bold" }}>Styling Frameworks</h3>
                 <div className="css_scrsc">
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> Bootstrap
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> CSS Modules
                   </div>
                 </div>
@@ -666,14 +674,14 @@ const Entry = () => {
               <div className="api_srtc">
                 <h3 style={{ fontWeight: "bold" }}>APIs & State Management</h3>
                 <div className="api_tst">
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> REST/Restful
                     API's
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> Axios/Fetch
                   </div>
-                  <div>
+                  <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> React Hooks
                   </div>
                 </div>
@@ -682,7 +690,7 @@ const Entry = () => {
           </div>
         </div>
         {/* Education and Certifications */}
-        <div className="education_certs">
+        <div className="education_certs" data-aos="zoom-in-out">
           <div className="text-center mt-lg-3">
             <p>
               <strong style={{ color: "#aaaaaaff" }}>
@@ -699,7 +707,7 @@ const Entry = () => {
           </div>
         </div>
         <div className="ed mt-4">
-          <div className="ed_upper d-flex">
+          <div className="ed_upper d-flex" data-aos="fade-down">
             <div className="check_ed">
               <i className="fa-solid fa-circle-check"></i>
             </div>
@@ -708,7 +716,7 @@ const Entry = () => {
               <p>Oluaka Institute of Technology - 2023</p>
             </div>
           </div>
-          <div className="ed_e2 d-flex">
+          <div className="ed_e2 d-flex" data-aos="fade-down">
             <div className="check_ed">
               <i className="fa-solid fa-circle-check"></i>
             </div>
