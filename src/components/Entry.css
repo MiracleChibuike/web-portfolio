@@ -228,7 +228,7 @@
   place-items: center;
   backdrop-filter: blur(20px);
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
 }
@@ -312,8 +312,9 @@
 /* Work Experience */
 .work_exp{
   display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 1em;
+  grid-template-columns: 1fr;
+  row-gap: 1em;
+  /* gap: 1em; */
 }
 .work_exp > .work_exp_auto, .work_exp_auto2{
     border-radius: 14px;
@@ -327,14 +328,22 @@
   display: flex;
   flex-direction: column;
 }
-.work_exp > .work_exp_auto:hover, .work_exp_auto:hover{
+.work_exp > .work_exp_auto:hover, .work_exp_auto2:hover{
   background: #0f2236;
 }
 .work_exp_auto .jD, .work_exp_auto2 .jD{
   flex-grow: 1;
 }
 .work_exp_auto .jD ul li, .work_exp_auto2 .jD ul li{
-  padding: 5px 0;
+  padding: 12px 0;
+}
+.jD{
+  display: none;
+  transition: top 0.4s ease;
+}
+.jD.retrieve{
+  display: block;
+    transition: top 0.4s ease;
 }
 .role_details span{
   margin: 0 15px 0 0;
@@ -351,7 +360,7 @@
 .tech_used > span{
   background: var(--clr-dark);
   border-radius: 5px;
-  margin: 0 10px 0 0;
+  margin: 10px 10px 0 0;
   padding: 5px;
 }
 
@@ -543,6 +552,7 @@
   }
   .work_exp{
     grid-template-columns: 1fr;
+    gap: 0;
   }
   /* #cv-download, .let-chat{
     padding: 10px;

@@ -56,6 +56,9 @@ const Entry = () => {
     }
   });
 
+  // Show and Hide JD when clicked
+ const [openJob, setOpenJob] = useState(null); 
+
   // Apply data-aos attributes and observe parent children for scroll animations
 
   return (
@@ -279,36 +282,43 @@ const Entry = () => {
           </div>
           {/* Working Experience cards */}
           <div className="work_exp">
-            <div className="work_exp_auto m-5">
-              <div className="role d-flex justify-content-between">
-                <h5>Front-End Engineer </h5>
-                <p>
-                  <i className="fa-solid fa-caret-down"></i>
-                </p>
-              </div>
-              <div className="role_details">
-                <span>Streethub Schola</span>
-                <span>
-                  {" "}
-                  <i className="fa-solid fa-location-dot text-secondary"></i>{" "}
-                  Owerri, Imo State Nigeria
-                </span>
-                <span>
-                  {" "}
-                  <i className="fa-solid fa-calendar text-secondary"></i> March
-                  2023 - Present{" "}
-                </span>
-                <div className="job_type mt-3">
-                  <span className="shadow-lg">Remote, Part-time</span>
+            <div className="work_exp_auto m-2">
+              <div
+                className="roles_info"
+                role="button"
+                onClick={() => setOpenJob(openJob === 0 ? null : 0)}
+                aria-expanded={openJob === 0}>
+                <div className="role d-flex justify-content-between">
+                  <h5>Front-End Engineer </h5>
+                  <p>
+                    <i className="fa-solid fa-caret-down"></i>
+                  </p>
+                </div>
+                <div className="role_details">
+                  <span>Streethub Schola</span>
+                  <span>
+                    {" "}
+                    <i className="fa-solid fa-location-dot text-secondary"></i>{" "}
+                    Owerri, Imo State Nigeria
+                  </span>
+                  <span>
+                    {" "}
+                    <i className="fa-solid fa-calendar text-secondary"></i>{" "}
+                    March 2023 - Present{" "}
+                  </span>
+                  <div className="job_type mt-3">
+                    <span className="shadow-lg">Remote, Part-time</span>
+                  </div>
                 </div>
               </div>
               <hr />
-              <div className="jD mt-2">
+              <div className={`jD mt-2 ${openJob === 0 ? "retrieve" : ""}`}>
                 <ul>
                   <li>
                     Developed and maintained the Newsletter page for teachers —
                     enabling educators to publish and manage announcements to
-                    students and parents while working alongside a team of 5 developers
+                    students and parents while working alongside a team of 5
+                    developers
                   </li>
                   <li>
                     Built the Question Bank page for teachers — allowing
@@ -338,40 +348,43 @@ const Entry = () => {
               </div>
             </div>
             {/* auto 2 */}
-            <div className="work_exp_auto2 m-5">
-              <div className="role d-flex justify-content-between">
-                <h5>Front-End Engineer </h5>
-                <p>
-                  <i className="fa-solid fa-caret-down"></i>
-                </p>
-              </div>
-              <div className="role_details">
-                <span>Zidio Development</span>
-                <span>
-                  {" "}
-                  <i className="fa-solid fa-location-dot text-secondary"></i>{" "}
-                  Delhi, India
-                </span>
-                <span>
-                  {" "}
-                  <i className="fa-solid fa-calendar text-secondary"></i> March
-                  2024 - July 2024{" "}
-                </span>
-                <div className="job_type mt-3">
-                  <span className="shadow-lg">Internship</span>
+            <div className="work_exp_auto2 m-2">
+              <div
+                className="roles_info"
+                role="button"
+                onClick={() => setOpenJob(openJob === 1 ? null : 1)}
+                aria-expanded={openJob === 1}>
+                <div className="role d-flex justify-content-between">
+                  <h5>Front-End Engineer </h5>
+                  <p>
+                    <i className="fa-solid fa-caret-down"></i>
+                  </p>
+                </div>
+                <div className="role_details">
+                  <span>Zidio Development</span>
+                  <span>
+                    {" "}
+                    <i className="fa-solid fa-location-dot text-secondary"></i>{" "}
+                    Delhi, India
+                  </span>
+                  <span>
+                    {" "}
+                    <i className="fa-solid fa-calendar text-secondary"></i>{" "}
+                    March 2024 - July 2024{" "}
+                  </span>
+                  <div className="job_type mt-3">
+                    <span className="shadow-lg">Internship</span>
+                  </div>
                 </div>
               </div>
               <hr />
-              <div className="jD mt-2">
+              <div className={`jD mt-2 ${openJob === 1 ? "retrieve" : ""}`}>
                 <ul>
                   <li>
-                    Developed a chat application using the 
-                    (Express, React, Node.js) as part of a
-                    collaborative team
+                    Developed a chat application using the (Express, React,
+                    Node.js) as part of a collaborative team
                   </li>
-                  <li>
-                    Designed and implemented real-time messaging features
-                  </li>
+                  <li>Designed and implemented real-time messaging features</li>
                   <li>
                     Built responsive user interface components in React with
                     state management for conversation threads and user
@@ -380,6 +393,87 @@ const Entry = () => {
                   <li>
                     Collaborated with team members on API design and database
                     schema optimization for efficient data retrieval
+                  </li>
+                </ul>
+                <div className="tech_used">
+                  <p className="mt-3">
+                    <strong>Technologies Used:</strong>{" "}
+                  </p>
+                  <span>Express.js</span>
+                  <span>React</span>
+                  <span>Node.js</span>
+                </div>
+              </div>
+            </div>
+            {/* auto 3 */}
+            <div className="work_exp_auto2 m-2">
+              <div
+                className="roles_info"
+                role="button"
+                onClick={() => setOpenJob(openJob === 2 ? null : 2)}
+                aria-expanded={openJob === 2}>
+                <div className="role d-flex justify-content-between">
+                  <h5>Front-End Developer & Instructor </h5>
+                  <p>
+                    <i className="fa-solid fa-caret-down"></i>
+                  </p>
+                </div>
+                <div className="role_details">
+                  <span>Kunoch Digital</span>
+                  <span>
+                    {" "}
+                    <i className="fa-solid fa-location-dot text-secondary"></i>{" "}
+                    Owerri, Imo State Nigeria
+                  </span>
+                  <span>
+                    {" "}
+                    <i className="fa-solid fa-calendar text-secondary"></i>{" "}
+                    August 2024 - Present{" "}
+                  </span>
+                  <div className="job_type mt-3">
+                    <span className="shadow-lg">Full-Time (On-site)</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div className={`jD mt-2 ${openJob === 2 ? "retrieve" : ""}`}>
+                <ul>
+                  <li>
+                    Delivered a modern, industry-aligned web development
+                    curriculum covering HTML5, CSS, JavaScript, and React plus
+                    deployment best practices with Git/GitHub to four successful
+                    cohorts — resulting in improved student competence, stronger
+                    project outcomes, and higher course completion rates.
+                  </li>
+                  <li>
+                    Led and supervised multiple student groups through hands-on
+                    projects from concept to deployment — enabling learners to
+                    build real-world applications and adopt professional
+                    development workflows used in the industry today.
+                  </li>
+                  <li>
+                    Designed and facilitated interactive lessons, practical
+                    coding sessions, and real-time debugging — significantly
+                    strengthening student's problem-solving abilities and
+                    accelerating their understanding of core development
+                    concepts.
+                  </li>
+                  <li>
+                    Coordinated group activities and fostered collaboration
+                    across batches — boosting teamwork, communication skills,
+                    and consistent project delivery among learners.
+                  </li>
+                  <li>
+                    Provided technical mentorship and detailed code reviews —
+                    ensuring students produced efficient, scalable, and
+                    maintainable applications while improving their technical
+                    confidence.
+                  </li>
+                  <li>
+                    Developed and updated course materials to reflect modern
+                    industry standards — improving learning efficiency, keeping
+                    learners up-to-date with current best practices, and
+                    enhancing overall performance across cohorts.
                   </li>
                 </ul>
                 <div className="tech_used">
