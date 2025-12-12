@@ -1,0 +1,47 @@
+:root {
+  --clr-light: #f1f1f1;
+  --clr-dark: #1a1f25;
+  --clr-transparent: #040404;
+  --clr-blue: #084280;
+  --clr-blue-main: #020260;
+  --clr-dev-cards-exp: #05101c;
+}
+
+/* Contact Main */
+.contact_main{
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap: 4rem;
+}
+
+.address_card{
+    background: #05101c;
+}
+.address_card i{
+    font-size: 20px;
+    background: var(--clr-blue);
+}
+form > div{
+    display: flex;
+    flex-direction: column;
+}
+form > div input, form > div textarea{
+    background: transparent;
+    border: 2px solid #05101c;
+    outline: none;
+    color: var(--clr-light);
+    transition: .5s ease-in-out;
+}
+form > div input:focus, form > div textarea:focus{
+    transition: border .5s ease;
+    border: 2px solid var(--clr-blue);
+    outline: 1px solid var(--clr-blue);
+}
+
+@media screen and (min-width: 0) and (max-width: 750px) {
+    .contact_main{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+}

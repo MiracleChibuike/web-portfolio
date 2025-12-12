@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import {BrowserRouter, Router, Route, Routes} from "react-router-dom";
 import Entry from './components/Entry';
+import Contact from './components/Contact';
 import NavMenu from './components/NavMenu';
 
 
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Entry />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -12,22 +12,22 @@
 }
 
 /* Tippy customization */
-/* .tippy-box[data-theme~='myTheme'] { */
-  /* background-color: var(--clr-blue-main)!important;   */
+ .tippy-box[data-theme~='myTheme'] { 
+   background-color: var(--clr-blue-main)!important;   
       /* your background */
-  /* color: #fff !important;    */
-  /* padding: 6px 8px; */
-  /* border-radius: 8px; */
-  /* transition: top .5s ease-in-out; */
+  color: #fff !important;   
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: top .5s ease-in-out;
               /* text color */            
               /* custom font size */
-/* } */
+} 
 
 /* Optional: style the tooltip arrow */
-/* .tippy-box[data-theme~='myTheme'] > .tippy-arrow::before { */
-  /* color: var(--clr-blue-main) !important;  */
-  /* arrow color matches background */
-/* } */
+.tippy-box[data-theme~='myTheme'] > .tippy-arrow::before { 
+  color: var(--clr-blue-main) !important;   /* arrow color matches background */
+
+} 
 
 /* Whatsapp Bot */
 .whatsapp_bot{

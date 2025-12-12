@@ -5,6 +5,7 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Entry.css";
+import "./Contact.css"
 // Import Tippy JS package
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css"; // For styling
@@ -95,6 +96,17 @@ const Entry = () => {
         projectsSection.current?.scrollIntoView({ behavior: "smooth" });
       })
     }
+  });
+
+  // Route to Contact Section
+  const contactSection = useRef(null);
+  const contactBtn = useRef(null)
+  useEffect(() => {
+    if (contactSection.current) {
+      contactBtn.current?.addEventListener("click", () => {
+        contactSection.current?.scrollIntoView({behavior: "smooth"})
+      })
+    }
   })
 
   // Load whatsapp bot script
@@ -126,11 +138,11 @@ const handleButtonClick = (buttonIndex) => {
 tippy("[data-tippy-content]");
 
 // Tippy for customization
-// useEffect(() => {
-//   tippy("[data-tippy-content]", {
-//     theme: "myTheme",
-//   });
-// }, []);
+useEffect(() => {
+  tippy("[data-tippy-content]", {
+    theme: "myTheme",
+  });
+}, []);
 
   return (
     <>
@@ -182,6 +194,7 @@ tippy("[data-tippy-content]");
             </button>
 
             <button
+              ref={contactBtn}
               className={isButtonActive === "Contact" ? "active" : ""}
               onClick={() => setIsButtonActive("Contact")}
               data-tippy-content="Contact Me">
@@ -1099,6 +1112,100 @@ tippy("[data-tippy-content]");
           </div>
         </div>
         {/* Contact Section */}
+        <div
+          ref={contactSection}
+          className="contact_section"
+          style={{
+            margin: "90px 0",
+          }}
+          data-aos="fade-down">
+          <div className="text-center mt-lg-3">
+            <p>
+              <strong style={{ color: "#aaaaaaff" }}>Let's Connect</strong>
+            </p>
+            <h3
+              className="dev-about-header"
+              style={{
+                fontWeight: "700",
+              }}>
+              Send Me A Message and Let's Get In Touch!
+            </h3>
+          </div>
+          <div className="contact_main mt-5">
+            <div className="contact_card_left">
+              <div className="address_card d-flex justify-content-between p-3 rounded-3 mb-4 shadow-lg">
+                <div>
+                  <i className="fa-solid fa-location-dot p-2 rounded-3 shadow"></i>
+                </div>
+                <div>
+                  <p> Ikenegbu Extension Owerri</p>
+                </div>
+              </div>
+              {/* Phone Number */}
+              <div className="address_card d-flex justify-content-between p-3 rounded-3 mb-4 shadow-lg">
+                <div>
+                  <i className="fa-solid fa-phone p-2 rounded-3 shadow"></i>
+                </div>
+                <div>
+                  <p> +234 905 6255 572</p>
+                </div>
+              </div>
+              {/* Email */}
+              <div className="address_card d-flex justify-content-between p-3 rounded-3 mb-4 shadow-lg">
+                <div>
+                  <i className="fa-solid fa-envelope p-2 rounded-3 shadow"></i>
+                </div>
+                <div>
+                  <p>
+                    <strong>Personal:</strong> miraclechibuike27@gmail.com
+                  </p>
+                </div>
+              </div>
+              {/*  */}
+            </div>
+            <div className="contact_card_right">
+              <div className="contact_form m-b3">
+                <form action="" method="get">
+                  <div className="name mb-3">
+                    <label htmlFor="name" className="pb-2">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      className="p-3 rounded-3 text-light"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  <div className="email mb-3">
+                    <label htmlFor="email" className="pb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      className="p-3 rounded-3 text-light"
+                      placeholder="Enter your email"
+                    />
+                    <div id="emailHelp" class="text-secondary">
+                      I'll never share your email with anyone else.
+                    </div>
+                  </div>
+                  <div className="message">
+                    <label htmlFor="message" className="pb-2">
+                      Message/Enquiry
+                    </label>
+                    <textarea
+                      draggable="false"
+                      className="p-3 rounded-3 text-light"
+                      name=""
+                      id=""
+                      rows={"10"}
+                      placeholder="Type in your message/enquiry you have"></textarea>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       {/* AI Chatbot - Outside parent to avoid blur effect */}
       <Chatbot onChatbotToggle={setChatbotOpen} />
