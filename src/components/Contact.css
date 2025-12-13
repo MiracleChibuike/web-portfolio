@@ -121,3 +121,9 @@ bottom: 20%;
     margin: 20px;
 }
 }
+
+@media screen and (max-width:1024px) {
+.user-comments: {
+  margin: 100px;
+}
+}
