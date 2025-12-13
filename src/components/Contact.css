@@ -37,11 +37,87 @@ form > div input:focus, form > div textarea:focus{
     border: 2px solid var(--clr-blue);
     outline: 1px solid var(--clr-blue);
 }
+.ct{
+    margin: 5px 0 0 15px;
+}
+#send{
+    background: linear-gradient(#084280, #020260);
+    color: var();
+}
+
+/* For Testimononials */
+/* Captions */
+.carousel-caption {
+  position: absolute;
+bottom: 20%;
+  text-align: center;
+  /* padding: 50px 0; */
+}
+.carousel-caption h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+}
+.carousel-caption p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.carousel-caption .btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background: var(--clr-Main-Green);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  margin: 20px;
+}
+.carousel-caption .btn:hover {
+  background: #444;
+} /* Indicators */
+.carousel-indicators {
+  position: static;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+.carousel-indicators #dot {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.carousel-indicators #dot.active {
+  background-color: var(--clr-Main-Green);
+}
+.user-avatar i{
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    color: var(--clr-blue);
+    border: 2px solid #05101c;
+    border-radius: 50%;
+    padding: 5px;
+}
+.user-comments{
+    background: linear-gradient(#020260, #084280);
+   margin: 20px 400px;
+}
 
 @media screen and (min-width: 0) and (max-width: 750px) {
     .contact_main{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 1rem;
+    padding: 20px;
+}
+.user-comments{
+    margin: 20px;
 }
 }

@@ -25,6 +25,7 @@ import forex from "../assets/projects/forex.png";
 import crypto from "../assets/projects/crypto.png";
 import laptop from "../assets/projects/laptop.png";
 import restaurant from "../assets/projects/restaurant.png";
+import Testimonial from "./Testimonial";
 
 const Entry = () => {
 
@@ -1111,6 +1112,8 @@ useEffect(() => {
             </div>
           </div>
         </div>
+        {/* Testimonials */}
+        <Testimonial/>
         {/* Contact Section */}
         <div
           ref={contactSection}
@@ -1133,32 +1136,30 @@ useEffect(() => {
           </div>
           <div className="contact_main mt-5">
             <div className="contact_card_left">
-              <div className="address_card d-flex justify-content-between p-3 rounded-3 mb-4 shadow-lg">
-                <div>
+              <div className="address_card d-flex p-3 rounded-3 mb-4 shadow-lg">
+                <div className="ml-1">
                   <i className="fa-solid fa-location-dot p-2 rounded-3 shadow"></i>
                 </div>
-                <div>
+                <div className="ct">
                   <p> Ikenegbu Extension Owerri</p>
                 </div>
               </div>
               {/* Phone Number */}
-              <div className="address_card d-flex justify-content-between p-3 rounded-3 mb-4 shadow-lg">
+              <div className="address_card d-flex p-3 rounded-3 mb-4 shadow-lg">
                 <div>
                   <i className="fa-solid fa-phone p-2 rounded-3 shadow"></i>
                 </div>
-                <div>
+                <div className="ct">
                   <p> +234 905 6255 572</p>
                 </div>
               </div>
               {/* Email */}
-              <div className="address_card d-flex justify-content-between p-3 rounded-3 mb-4 shadow-lg">
+              <div className="address_card d-flex p-3 rounded-3 mb-4 shadow-lg">
                 <div>
                   <i className="fa-solid fa-envelope p-2 rounded-3 shadow"></i>
                 </div>
-                <div>
-                  <p>
-                    <strong>Personal:</strong> miraclechibuike27@gmail.com
-                  </p>
+                <div className="ct">
+                  <p>miraclechibuike27@gmail.com</p>
                 </div>
               </div>
               {/*  */}
@@ -1198,9 +1199,10 @@ useEffect(() => {
                       className="p-3 rounded-3 text-light"
                       name=""
                       id=""
-                      rows={"10"}
+                      rows={"7"}
                       placeholder="Type in your message/enquiry you have"></textarea>
                   </div>
+                  <button type="submit" id="send" className="mb-lg-5 mt-3 p-3  rounded-3">Send Message</button>
                 </form>
               </div>
             </div>

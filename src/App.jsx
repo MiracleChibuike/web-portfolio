@@ -3,6 +3,7 @@ import { useState } from 'react';
 import {BrowserRouter, Router, Route, Routes} from "react-router-dom";
 import Entry from './components/Entry';
 import Contact from './components/Contact';
+import Testimonial from './components/Testimonial';
 import NavMenu from './components/NavMenu';
 
 
