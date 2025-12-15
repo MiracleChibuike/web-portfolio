@@ -130,6 +130,16 @@ const handleButtonClick = (buttonIndex) => {
   setIsButtonActive(buttonIndex);
 };
 
+// Scroll to Footer 
+const scrollFooter = useRef(null);
+const buttonScroll = useRef(null);
+useEffect(() => {
+  if (scrollFooter.current) {
+    buttonScroll.current?.addEventListener("click", () => {
+      scrollFooter.current?.scrollIntoView({behavior: "smooth"})
+    })
+  }
+})
 
 
 //  Tool Tippy Initialization
@@ -257,7 +267,7 @@ useEffect(() => {
           className="hero-dev-contacts d-flex justify-content-between"
           ref={aboutMe}>
           <div className="scroll">
-            <button title="Scroll Down">
+            <button ref={buttonScroll}>
               <i className="fa-solid fa-arrow-down"></i>
             </button>
           </div>
@@ -374,8 +384,9 @@ useEffect(() => {
               </p>
               <div>
                 <a
+                  ref={contactBtn}
                   aria-label="Let's speak"
-                  href="#contact-me"
+                  href=""
                   id="speak-with-me">
                   Speak with Me
                 </a>
@@ -1150,7 +1161,12 @@ useEffect(() => {
                   <i className="fa-solid fa-phone p-2 rounded-3 shadow"></i>
                 </div>
                 <div className="ct">
-                  <p> +234 905 6255 572</p>
+                  <p>
+                    {" "}
+                    <a href="tel:+234 905 6255 572" className="text-white">
+                      +234 905 6255 572
+                    </a>
+                  </p>
                 </div>
               </div>
               {/* Email */}
@@ -1159,7 +1175,13 @@ useEffect(() => {
                   <i className="fa-solid fa-envelope p-2 rounded-3 shadow"></i>
                 </div>
                 <div className="ct">
-                  <p>miraclechibuike27@gmail.com</p>
+                  <p>
+                    <a
+                      href="mailto:miraclechibuike27@gmail.com"
+                      className="text-white">
+                      miraclechibuike27@gmail.com
+                    </a>
+                  </p>
                 </div>
               </div>
               {/*  */}
@@ -1187,7 +1209,10 @@ useEffect(() => {
                       placeholder="Enter your email"
                     />
                     <div id="emailHelp" class="text-secondary">
-                      I'll never share your email with anyone else.
+                      <small>
+                        {" "}
+                        I'll never share your email with anyone else.
+                      </small>
                     </div>
                   </div>
                   <div className="message">
@@ -1235,14 +1260,37 @@ useEffect(() => {
         </div>
       </div>
       {/* Footer */}
-      <footer className="mt-lg-5">
+      <footer className="mt-lg-5" ref={scrollFooter}>
         <div className="footer_contents p-5">
           <h2 className="text-center text-secondary">Onyia Miracle C.</h2>
           <div className="social_icons p-2">
+            {/* <div className="useful_links">
+              <p>Home</p>
+              <p>About</p>
+              <p>Portfolio</p>
+              <p>Work Expereince</p>
+              <p>Projects</p>
+              <p>Contact</p>
+            </div> */}
             <div className="social_icon_footer">
-              <i className="fa-brands fa-github m-2"></i>
-              <i class="fa-brands fa-linkedin m-2"></i>
-              <i class="fa-solid fa-envelope-open-text m-2"></i>
+              <a
+                href="http://github.com/MiracleChibuike"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i className="fa-brands fa-github m-2 text-secondary"></i>
+              </a>
+              <a
+                href="http://linkedin.com/in/onyia-miracle"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin m-2 text-secondary"></i>
+              </a>
+              <a
+                href="https://onyiamiracle.substack.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fa-solid fa-envelope-open-text m-2 text-secondary"></i>
+              </a>
             </div>
             <div className="rights">
               <p className="text-secondary">

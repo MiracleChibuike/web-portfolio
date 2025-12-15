@@ -21,9 +21,7 @@ const Testimonial = () => {
         {" "}
         <div className="text-center mt-lg-3">
           <p>
-            <strong style={{ color: "#aaaaaaff" }}>
-              My Client's Testimonies
-            </strong>
+            <strong style={{ color: "#aaaaaaff" }}>Testimonies</strong>
           </p>
           <h3
             className="dev-about-header"
@@ -35,12 +33,12 @@ const Testimonial = () => {
         </div>
         <div className="c-testimonies">
           <div
-            id="carouselExampleAutoplaying"
+            id="carouselExampleRide"
             class="carousel slide"
             data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div className="user-comments p-3 rounded-5">
+              <div class="carousel-item active" data-bs-interval="20000">
+                <div className="user-comments p-3 rounded-5" id="comments">
                   <p>
                     <i
                       class="fa-solid fa-quote-left p-1 text-light"
@@ -75,7 +73,10 @@ const Testimonial = () => {
                 </div>
               </div>
               <div class="carousel-item">
-                <div className="user-comments p-3 rounded-5">
+                <div
+                  className="user-comments p-3 rounded-5"
+                  id="comments"
+                  data-bs-interval="40000">
                   <p>
                     <i
                       class="fa-solid fa-quote-left p-1 text-light"
@@ -108,11 +109,15 @@ const Testimonial = () => {
                 </div>
               </div>
               <div class="carousel-item">
-                <div className="user-comments p-3 rounded-5">
+                <div
+                  className="user-comments p-3 rounded-5"
+                  id="comments"
+                  data-bs-interval="60000">
                   <p>
                     <i
                       class="fa-solid fa-quote-left p-1 text-light"
-                      style={{ fontSize: "30px" }}></i> Miracle is a highly skilled frontend engineer with strong a
+                      style={{ fontSize: "30px" }}></i>{" "}
+                    Miracle is a highly skilled frontend engineer with strong a
                     user-centric mindset. He builds intuitive, easy-to-navigate
                     interfaces while aligning every design decision with
                     business objectives. His creativity, communication skills,
@@ -145,7 +150,7 @@ const Testimonial = () => {
             <button
               class="carousel-control-prev"
               type="button"
-              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-target="#carouselExampleRide"
               data-bs-slide="prev">
               <span
                 class="carousel-control-prev-icon"
@@ -155,7 +160,7 @@ const Testimonial = () => {
             <button
               class="carousel-control-next"
               type="button"
-              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-target="#carouselExampleRide"
               data-bs-slide="next">
               <span
                 class="carousel-control-next-icon"

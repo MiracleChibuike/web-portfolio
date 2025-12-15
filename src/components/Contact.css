@@ -16,6 +16,10 @@
 
 .address_card{
     background: #05101c;
+    transition: .5s ease;
+}
+.address_card:hover{
+  background: var(--clr-blue);
 }
 .address_card i{
     font-size: 20px;
@@ -109,6 +113,12 @@ bottom: 20%;
 .user-comments{
     background: linear-gradient(#020260, #084280);
    margin: 20px 400px;
+   display: grid;
+   grid-template-rows: subgrid;
+   grid-row: 1 / 4;
+}
+.user-comments p{
+  flex-grow: 1;
 }
 
 /* Subsscription */
@@ -127,7 +137,7 @@ bottom: 20%;
 /* Footer */
 .footer_contents{
    background: var(--clr-dev-cards-exp);
-   height: 50vh;
+   height: 55vh;
    margin-top: 90px;
 }
 .footer_contents h2{
@@ -144,6 +154,15 @@ bottom: 20%;
   font-size: 24px;
   color: var(--clr-blue);
   cursor: pointer;
+  background: var(--clr-transparent);
+  padding: 10px;
+  border-radius: 9px;
+  border: 1px solid var(--clr-blue);
+  transition: .5s ease;
+}
+.social_icon_footer i:hover{
+  background: #1a1f25;
+  transform: scale(1.1);
 }
 @media screen and (min-width: 0) and (max-width: 750px) {
     .contact_main{
@@ -152,7 +171,7 @@ bottom: 20%;
     gap: 1rem;
     padding: 20px;
 }
-.user-comments{
+#comments{
     margin: 20px 20px;
 }
 .letter_sub{
@@ -163,7 +182,7 @@ bottom: 20%;
   text-align: center;
 }
 .social_icon_footer{
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 }
 
