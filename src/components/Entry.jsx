@@ -447,7 +447,7 @@ const Entry = () => {
                   <h5 style={{ background: "transparent" }}>Experience</h5>
                   <p style={{ background: "transparent" }}>
                     <small style={{ background: "transparent" }}>
-                      2+ Years of Industry Experience
+                      3+ Years of Industry Experience
                     </small>
                   </p>
                 </div>
@@ -480,7 +480,7 @@ const Entry = () => {
                 data-aos="fade-right"
                 id="int">
                 Hello All! I am Onyia Miracle, a Certified Front-End Web
-                Developer based out of Owerri, Nigeria. I enjoy turning ideas
+                Developer based outside of Lagos, Nigeria. I enjoy turning ideas
                 into clean, responsive, and user-friendly websites and
                 applications, blending both logic and creativity in every
                 project I build. Alongside development, I have experience
@@ -872,6 +872,12 @@ const Entry = () => {
                   </div>
                   <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> NPM
+                  </div>
+                  <div data-aos="fade-down">
+                    <i className="fa-solid fa-check-circle"></i> Firebase
+                  </div>
+                  <div data-aos="fade-down">
+                    <i className="fa-solid fa-check-circle"></i> Google Analytics
                   </div>
                   <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> VS Code
@@ -1343,7 +1349,7 @@ const Entry = () => {
                       placeholder="Type in your message/enquiry you have"></textarea>
                   </div>
                   <button
-                  ref={formSubmitBtn}
+                    ref={formSubmitBtn}
                     type="submit"
                     id="send"
                     className="mb-lg-5 mt-3 p-3  rounded-3">
@@ -1411,7 +1417,7 @@ const Entry = () => {
             <div className="rights">
               <p className="text-secondary">
                 {" "}
-                <i class="fa-solid fa-copyright text-secondary"></i> 2025 Onyia
+                <i class="fa-solid fa-copyright text-secondary"></i> 2026 Onyia
                 Miracle. All Rights Reserved
               </p>
             </div>
