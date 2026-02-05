@@ -572,9 +572,18 @@ const Entry = () => {
                     announcement delivery
                   </li>
                   <li>
-                    Currently developing the "Take Test" feature — building an
-                    interactive test-taking interface that fetches questions
-                    dynamically from the question bank
+                    Successfully implemented the "<strong>Take Test</strong>"
+                    feature — built an interactive test-taking interface that
+                    fetches questions dynamically from the question bank and
+                    allows students to take test leading to a seamless user
+                    experience
+                  </li>
+                  <li>
+                    Currently working on the "<strong>View Results</strong>"
+                    feature — developing a results dashboard that displays test
+                    scores and performance analytics for students and teachers,
+                    enhancing the platform's value for educators and learners
+                    alike.
                   </li>
                 </ul>
                 <div className="tech_used">
@@ -723,6 +732,16 @@ const Entry = () => {
                     industry standards — improving learning efficiency, keeping
                     learners up-to-date with current best practices, and
                     enhancing overall performance across cohorts.
+                  </li>
+                  <li>
+                    Currently developing and implementing the{" "}
+                    <strong>
+                      "Advanced Front-End Web Development Course Curriculum"
+                    </strong>{" "}
+                    — aimed at equipping students to gain in-depth knowledge of
+                    React.js, Firebase, Git/Github, Deployment Best Practices
+                    and more which will equip them to face real-world
+                    challenges/project as used in modern web development today
                   </li>
                 </ul>
                 <div className="tech_used">
@@ -877,7 +896,8 @@ const Entry = () => {
                     <i className="fa-solid fa-check-circle"></i> Firebase
                   </div>
                   <div data-aos="fade-down">
-                    <i className="fa-solid fa-check-circle"></i> Google Analytics
+                    <i className="fa-solid fa-check-circle"></i> Google
+                    Analytics
                   </div>
                   <div data-aos="fade-down">
                     <i className="fa-solid fa-check-circle"></i> VS Code
